@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Java Full Stack Developer Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+  .resume {
+    background-color: #f9f9f9;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    background-color: #f39c12;
+  }
+
+  .name {
+    font-size: 36px;
+    color: #333;
+  }
+
+  .title {
+    font-size: 20px;
+    color: #555;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    color: #e74c3c;
+  }
+
+  .sub-title {
+    font-size: 18px;
+  }
+
+  .sub-sub-title {
+    font-size: 16px;
+    color: #444;
+    /* font-weight: bold; */
+  }
+
+  .section-content {
+    font-size: 16px;
+    color: #555;
+    margin-left: 20px;
+ 
+  
+  }
+
+  .skills-list,
+  .certificates-list {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .skills-list li,
+  .certificates-list li {
+    background-color: #34495e;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  .git:hover{
+    text-decoration: none;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>'),auto;
+  }
+  .linkedin:hover{
+    text-decoration: none;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>'),auto;
+  }
+  .gmail:hover{
+     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>'),auto;
+     text-decoration: none;
+  }
+  .contact:hover{
+    text-decoration: none; 
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-forwarded"><polyline points="18 2 22 6 18 10"/><line x1="14" x2="22" y1="6" y2="6"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'),auto;
+  }
+  .loc:hover{
+    text-decoration: none;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'),auto;
+  }
+</style>
+
+<body>
+  <div class="container-fluid mt-2 ">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="header d-sm-flex justify-content-around pt-2 border rounded-top">
+          <div>
+            <h1 class="name h1 text-center ">Ram Gopal</h1>
+            <p class="title h5 text-center">Java Full Stack Developer</p>
+          </div>
+          <section class="section">
+            <p class="section-content">
+              <i class="fas fa-phone h5"></i><label class="text-body h6  font-italic m-2 contact">869-674-2758</label><br>
+              <i class="fas fa-envelope h5 my-2"></i><a href="https://mail.google.com/mail/u/0/#snoozed?compose=new"
+                target="_blank"  class=" text-body h6  font-italic my-2 gmail"> gopalnagarjwr@gmail.com</a><br>
+              <i class="fab fa-linkedin h5 my-2"></i> <a href="https://www.linkedin.com/in/ramnagar-b99530281"
+                target="_blank"  class=" text-body h6  font-italic m-2 linkedin">linkedin.com/ramnagar-b99530281</a><br>
+              <i class="fab fa-github h5 my-2"></i> <a href="https://github.com/gopalnagarjwr?tab=repositories" target="_blank"  class=" text-body h6  font-italic m-2 git">github.com/gopalnagarjwr</a><br>
+              <i class="fa fa-map-marker h5 mt-2 mb-lg-0 "></i> <a href="https://github.com/gopalnagarjwr?tab=repositories" target="_blank"  class=" text-body h6  font-italic m-2 loc">Jaipur Rajsthan, India</a>
+             
+            </p>
+          </section>
+        </div>
+        <div class="resume d-md-flex justify-content-around p-md-4">
+          <div class="main">
+            <section class="section">
+              <h2 class="section-title">Summary</h2>
+              <p class="section-content">Highly motivated and enthusiastic candidate with a strong foundation in Java
+                programming and a passion for leveraging technology to drive business growth. Equipped with hands-on
+                experience in Java development, eager to apply technical expertise to develop innovative solutions.</p>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Experience</h2>
+              <div class="experience">
+                <h3 class="sub-title">Java Full Stack Intern</h3>
+                <p class="section-content">I worked as a Java Full Stack intern at <a href="https://www.regexsoftware.com/" class=" text-body h6  font-italic" target="_blank"> Regex software services</a> company for 10
+                  months. During my internship, I gained valuable experience in both front-end and back-end development. I had the
+                  opportunity to work on a variety of projects and tasks, including:                  
+                </p>
+                <p class="section-content font-italic">Jan 2023 - Present</p>
+                <h4 class="sub-title">Project Summary</h4>
+                <a href="https://github.com/gopalnagarjwr/HospitalProject" class="sub-sub-title text-decoration-none">Hospital management  <i class="fa fa-link" aria-hidden="true"></i></a>
+                
+                <p class="section-content">Creating a hospital management system as a mini-project is a great way to
+                  practice web development and database integration:</p>
+                <ul class="section-content">
+                  <li>HTML Design</li>
+                  <li>CSS Styling</li>
+                  <li>Bootstrap for responsive design</li>
+                  <li>Servlets for server-side logic</li>
+                  <li>JDBC for database operations</li>
+                </ul>
+                <p class="section-content font-italic">July 2023 - Oct 2023</p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Languages</h2>
+               <p class="section-content h6">English, Hindi</p>
+               <p class="section-content font-italic"> Professional Working Proficiency</p>
+            </section>
+          </div>
+          <div>
+            <section class="section">
+              <h2 class="section-title">Skills</h2>
+              <ul class="skills-list">
+                <li>HTML 5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>Database (SQL & MySQL)</li>
+                <li>Core Java</li>
+                <li>Servlet</li>
+                <li>JSP</li>
+                <li>JDBC</li>
+                <li>Git & GitHub</li>
+                <li>Linux</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Education</h2>
+              <div class="education px-3">
+                <h3 class="sub-title">Govt. PG College Jhalawar (Kota University)</h3>
+                <p class="section-content font-italic">Bachelor of Arts - 2022 to 2024</p>
+                <h3 class="sub-title">RBSE Ajmer</h3>
+                <p class="section-content font-italic">Higher Secondary - 2019 to 2020</p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Certificates</h2>
+              <ul class="certificates-list">
+                <li>Java Full Stack Development</li>
+                <li>Git & GitHub</li>
+                <li>Cretified by Hacker Rank in java </li>
+                <li>Cretified by Hacker Rank in SQL</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
